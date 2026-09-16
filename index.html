@@ -328,6 +328,10 @@
 
     activateBtn.addEventListener('click', activateJarvis);
 
+    document.querySelector('a-scene').addEventListener('enter-vr', () => {
+      setTimeout(activateJarvis, 500);
+    });
+
     window.addEventListener('load', () => {
       setTimeout(() => { if (!window.AFRAME) setStatus("3D ENGINE FAILED TO LOAD"); }, 3000);
     });
